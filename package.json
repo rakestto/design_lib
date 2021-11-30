@@ -1,11 +1,11 @@
 {
   "name": "rakes-design-sys",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Design library for affiliate pages",
   "main": "./dist/bundle.js",
   "module": "./dist/bundle.es.js",
   "files": [
-    "./dist/**"
+    "dist/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
