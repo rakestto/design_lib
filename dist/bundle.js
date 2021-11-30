@@ -12,7 +12,7 @@ var styled__default = /*#__PURE__*/_interopDefaultLegacy(styled);
 
 var StyledHelloWorld = styled__default["default"].div.withConfig({
   displayName: "Appstyles__StyledHelloWorld",
-  componentId: "sc-lvcra6-0"
+  componentId: "sc-1apyuja-0"
 })(["display:flex;background-color:pink;padding:16px;"]);
 
 var App = function App() {
