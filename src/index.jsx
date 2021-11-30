@@ -1,3 +1,4 @@
 import App from "./App";
+import { GlobalStyle } from "./GlobalStyles";
 
-export { App };
+export { App, GlobalStyle };

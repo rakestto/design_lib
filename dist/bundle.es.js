@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import _taggedTemplateLiteral from '@babel/runtime/helpers/taggedTemplateLiteral';
-import styled from 'styled-components';
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
-var _templateObject;
-var StyledHelloWorld = styled.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  background-color: pink;\n  padding: 16px;\n"])));
+var StyledHelloWorld = styled.div.withConfig({
+  displayName: "Appstyles__StyledHelloWorld",
+  componentId: "sc-lvcra6-0"
+})(["display:flex;background-color:pink;padding:16px;"]);
 
 var App = function App() {
-  useEffect(function () {
-    console.log("Hola");
-  }, []);
   return /*#__PURE__*/React.createElement(StyledHelloWorld, null, "Hola mundo!");
 };
 
-export { App };
+var GlobalStyle = createGlobalStyle(["*{box-sizing:border-box;}body{padding:0px;background-color:pink;}"]);
+
+export { App, GlobalStyle };
 //# sourceMappingURL=bundle.es.js.map

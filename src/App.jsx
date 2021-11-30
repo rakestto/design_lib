@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { StyledHelloWorld } from "./App.styles";
 
 const App = () => {
-  useEffect(() => {
-    console.log("Hola");
-  }, []);
   return <StyledHelloWorld>Hola mundo!</StyledHelloWorld>;
 };
 
