@@ -8,7 +8,7 @@ const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
 const config = {
   input: "src/index.jsx",
-  external: ["react", /@babel\/runtime/],
+  external: ["react", "styled-components", /@babel\/runtime/],
 
   output: [
     {
