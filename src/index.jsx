@@ -1,4 +1,4 @@
-import App from "./App";
+import DSThemeProvider, { DSThemeContext } from "./themeProvider";
 import { GlobalStyle } from "./GlobalStyles";
 
-export { App, GlobalStyle };
+export { DSThemeContext, DSThemeProvider, GlobalStyle };

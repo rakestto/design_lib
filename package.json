@@ -1,6 +1,6 @@
 {
   "name": "rakes-design-sys",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Design library for affiliate pages",
   "main": "./dist/bundle.js",
   "module": "./dist/bundle.es.js",
@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "author": "Jose Fernando",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "@babel/runtime": "^7.16.3"
   },
   "peerDependencies": {
+    "react": "^17.0.2",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {

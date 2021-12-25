@@ -7,6 +7,6 @@ export const GlobalStyle = createGlobalStyle`
 
     body{
         padding: 0px;
-        background-color: pink;
+        background-color: pink ;
     }
 `;
