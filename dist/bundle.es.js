@@ -38,7 +38,7 @@ var ThemeProvider = function ThemeProvider(_ref) {
   }, children));
 };
 
-var GlobalStyle = createGlobalStyle(["*{box-sizing:border-box;}body{padding:0px;background-color:pink;}"]);
+var GlobalStyle = createGlobalStyle(["*{box-sizing:border-box;}html{padding:0px;margin:0px;}body{padding:0px;margin:0px;background-color:whitesmoke;}"]);
 
 export { GlobalStyle, ThemeContext, ThemeProvider };
 //# sourceMappingURL=bundle.es.js.map

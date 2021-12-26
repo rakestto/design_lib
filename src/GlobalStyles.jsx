@@ -5,8 +5,14 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html{
+        padding: 0px;
+        margin: 0px;
+    }
+
     body{
         padding: 0px;
-        background-color: pink ;
+        margin: 0px;
+        background-color: whitesmoke ;
     }
 `;

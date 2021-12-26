@@ -47,7 +47,7 @@ var ThemeProvider = function ThemeProvider(_ref) {
   }, children));
 };
 
-var GlobalStyle = styledComponents.createGlobalStyle(["*{box-sizing:border-box;}body{padding:0px;background-color:pink;}"]);
+var GlobalStyle = styledComponents.createGlobalStyle(["*{box-sizing:border-box;}html{padding:0px;margin:0px;}body{padding:0px;margin:0px;background-color:whitesmoke;}"]);
 
 exports.GlobalStyle = GlobalStyle;
 exports.ThemeContext = ThemeContext;
