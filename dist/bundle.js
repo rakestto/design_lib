@@ -11,7 +11,7 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 var _slicedToArray__default = /*#__PURE__*/_interopDefaultLegacy(_slicedToArray);
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
-var DStheme = {
+var theme = {
   ligth: {
     primary: "white"
   },
@@ -20,36 +20,36 @@ var DStheme = {
   }
 };
 
-var DSThemeContext = /*#__PURE__*/React.createContext();
+var ThemeContext = /*#__PURE__*/React.createContext();
 
-var DSThemeProvider = function DSThemeProvider(_ref) {
+var ThemeProvider = function ThemeProvider(_ref) {
   var children = _ref.children;
 
-  var _useState = React.useState(DStheme.ligth),
+  var _useState = React.useState(theme.ligth),
       _useState2 = _slicedToArray__default["default"](_useState, 2),
-      theme = _useState2[0],
+      currentTheme = _useState2[0],
       setCurrentTheme = _useState2[1];
 
   var toggleTheme = function toggleTheme() {
     setCurrentTheme(function (prev) {
-      return prev === DStheme.ligth ? DStheme.dark : DStheme.ligth;
+      return prev === theme.ligth ? theme.dark : theme.ligth;
     });
   };
 
   var values = {
     toggleTheme: toggleTheme,
-    theme: theme
+    currentTheme: currentTheme
   };
-  return /*#__PURE__*/React__default["default"].createElement(DSThemeContext.Provider, {
+  return /*#__PURE__*/React__default["default"].createElement(ThemeContext.Provider, {
     value: values
   }, /*#__PURE__*/React__default["default"].createElement(styledComponents.ThemeProvider, {
-    theme: theme
+    theme: currentTheme
   }, children));
 };
 
 var GlobalStyle = styledComponents.createGlobalStyle(["*{box-sizing:border-box;}body{padding:0px;background-color:pink;}"]);
 
-exports.DSThemeContext = DSThemeContext;
-exports.DSThemeProvider = DSThemeProvider;
 exports.GlobalStyle = GlobalStyle;
+exports.ThemeContext = ThemeContext;
+exports.ThemeProvider = ThemeProvider;
 //# sourceMappingURL=bundle.js.map

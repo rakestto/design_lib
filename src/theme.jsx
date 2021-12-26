@@ -1,4 +1,4 @@
-const DStheme = {
+const theme = {
   ligth: {
     primary: "white",
   },
@@ -7,4 +7,4 @@ const DStheme = {
   },
 };
 
-export default DStheme;
+export default theme;

@@ -1,30 +1,30 @@
 import { createContext, useState } from "react";
-import { ThemeProvider } from "styled-components";
-import DStheme from "./DSTheme";
+import { ThemeProvider as SCThemeProvider } from "styled-components";
+import theme from "./theme";
 import React from "react";
 
-const DSThemeContext = createContext();
+const ThemeContext = createContext();
 
-const DSThemeProvider = ({ children }) => {
-  const [theme, setCurrentTheme] = useState(DStheme.ligth);
+const ThemeProvider = ({ children }) => {
+  const [currentTheme, setCurrentTheme] = useState(theme.ligth);
 
   const toggleTheme = () => {
     setCurrentTheme((prev) =>
-      prev === DStheme.ligth ? DStheme.dark : DStheme.ligth
+      prev === theme.ligth ? theme.dark : theme.ligth
     );
   };
 
   const values = {
     toggleTheme,
-    theme,
+    currentTheme,
   };
 
   return (
-    <DSThemeContext.Provider value={values}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </DSThemeContext.Provider>
+    <ThemeContext.Provider value={values}>
+      <SCThemeProvider theme={currentTheme}>{children}</SCThemeProvider>
+    </ThemeContext.Provider>
   );
 };
 
-export default DSThemeProvider;
-export { DSThemeContext };
+export default ThemeProvider;
+export { ThemeContext };

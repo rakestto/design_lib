@@ -1,8 +1,8 @@
 import _slicedToArray from '@babel/runtime/helpers/slicedToArray';
 import React, { createContext, useState } from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { ThemeProvider as ThemeProvider$1, createGlobalStyle } from 'styled-components';
 
-var DStheme = {
+var theme = {
   ligth: {
     primary: "white"
   },
@@ -11,34 +11,34 @@ var DStheme = {
   }
 };
 
-var DSThemeContext = /*#__PURE__*/createContext();
+var ThemeContext = /*#__PURE__*/createContext();
 
-var DSThemeProvider = function DSThemeProvider(_ref) {
+var ThemeProvider = function ThemeProvider(_ref) {
   var children = _ref.children;
 
-  var _useState = useState(DStheme.ligth),
+  var _useState = useState(theme.ligth),
       _useState2 = _slicedToArray(_useState, 2),
-      theme = _useState2[0],
+      currentTheme = _useState2[0],
       setCurrentTheme = _useState2[1];
 
   var toggleTheme = function toggleTheme() {
     setCurrentTheme(function (prev) {
-      return prev === DStheme.ligth ? DStheme.dark : DStheme.ligth;
+      return prev === theme.ligth ? theme.dark : theme.ligth;
     });
   };
 
   var values = {
     toggleTheme: toggleTheme,
-    theme: theme
+    currentTheme: currentTheme
   };
-  return /*#__PURE__*/React.createElement(DSThemeContext.Provider, {
+  return /*#__PURE__*/React.createElement(ThemeContext.Provider, {
     value: values
-  }, /*#__PURE__*/React.createElement(ThemeProvider, {
-    theme: theme
+  }, /*#__PURE__*/React.createElement(ThemeProvider$1, {
+    theme: currentTheme
   }, children));
 };
 
 var GlobalStyle = createGlobalStyle(["*{box-sizing:border-box;}body{padding:0px;background-color:pink;}"]);
 
-export { DSThemeContext, DSThemeProvider, GlobalStyle };
+export { GlobalStyle, ThemeContext, ThemeProvider };
 //# sourceMappingURL=bundle.es.js.map
