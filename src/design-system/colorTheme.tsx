@@ -133,8 +133,9 @@ const themes: Themes = {
     inverseSurface: colorPalette.neutrals[99],
     inverseOnSurface: colorPalette.neutrals[0],
     inversePrimary: colorPalette.primary[80],
+
+    surfaceTones: surfacePalette.darkSurfaces,
     colorPalette,
-    surfacePalette,
   },
   light: {
     primary: colorPalette.primary[50],
@@ -167,8 +168,9 @@ const themes: Themes = {
     inverseSurface: colorPalette.neutrals[30],
     inverseOnSurface: colorPalette.neutrals[99],
     inversePrimary: colorPalette.primary[80],
+
+    surfaceTones: surfacePalette.ligthSurfaces,
     colorPalette,
-    surfacePalette,
   },
 };
 

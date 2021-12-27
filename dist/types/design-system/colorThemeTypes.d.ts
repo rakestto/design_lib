@@ -15,6 +15,13 @@ export interface ColorSet {
     99: Color;
     100: Color;
 }
+export interface ColorPalette<T> {
+    primary: T;
+    secondary: T;
+    tertiary: T;
+    cuaternary: T;
+    neutrals: T;
+}
 export interface SurfaceTones {
     surfaceOne: string;
     surfaceTwo: string;
@@ -25,13 +32,6 @@ export interface SurfaceTones {
 export interface SurfacePalette {
     ligthSurfaces: SurfaceTones;
     darkSurfaces: SurfaceTones;
-}
-export interface ColorPalette<T> {
-    primary: T;
-    secondary: T;
-    tertiary: T;
-    cuaternary: T;
-    neutrals: T;
 }
 export interface Theme {
     primary?: Color;
@@ -65,7 +65,7 @@ export interface Theme {
     inverseOnSurface?: Color;
     inversePrimary?: Color;
     colorPalette: ColorPalette<ColorSet>;
-    surfacePalette: SurfacePalette;
+    surfaceTones: SurfaceTones;
 }
 export interface Themes {
     dark: Theme;

@@ -18,6 +18,14 @@ export interface ColorSet {
   100: Color;
 }
 
+export interface ColorPalette<T> {
+  primary: T;
+  secondary: T;
+  tertiary: T;
+  cuaternary: T;
+  neutrals: T;
+}
+
 export interface SurfaceTones {
   surfaceOne: string;
   surfaceTwo: string;
@@ -31,14 +39,8 @@ export interface SurfacePalette {
   darkSurfaces: SurfaceTones;
 }
 
-export interface ColorPalette<T> {
-  primary: T;
-  secondary: T;
-  tertiary: T;
-  cuaternary: T;
-  neutrals: T;
-}
-
+//Theme = colorPalette, surfacePalette, M3-Tokens
+//TODO - Add typography and spacings
 export interface Theme {
   primary?: Color;
   primaryContainer?: Color;
@@ -75,7 +77,7 @@ export interface Theme {
   inverseOnSurface?: Color;
   inversePrimary?: Color;
   colorPalette: ColorPalette<ColorSet>;
-  surfacePalette: SurfacePalette;
+  surfaceTones: SurfaceTones;
 }
 
 export interface Themes {

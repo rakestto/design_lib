@@ -131,8 +131,8 @@ var themes = {
         inverseSurface: colorPalette.neutrals[99],
         inverseOnSurface: colorPalette.neutrals[0],
         inversePrimary: colorPalette.primary[80],
+        surfaceTones: surfacePalette.darkSurfaces,
         colorPalette: colorPalette,
-        surfacePalette: surfacePalette,
     },
     light: {
         primary: colorPalette.primary[50],
@@ -161,8 +161,8 @@ var themes = {
         inverseSurface: colorPalette.neutrals[30],
         inverseOnSurface: colorPalette.neutrals[99],
         inversePrimary: colorPalette.primary[80],
+        surfaceTones: surfacePalette.ligthSurfaces,
         colorPalette: colorPalette,
-        surfacePalette: surfacePalette,
     },
 };
 
