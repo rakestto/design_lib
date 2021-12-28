@@ -1,5 +1,4 @@
 import "styled-components";
-
 export type Color = string;
 
 export interface ColorSet {
@@ -84,7 +83,6 @@ export interface Themes {
   dark: Theme;
   light: Theme;
 }
-
 declare module "styled-components" {
   export interface DefaultTheme extends Theme {}
 }

@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import "styled-components";
 import {
   DefaultTheme,
   ThemeProvider as SCThemeProvider,
