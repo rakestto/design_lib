@@ -14,7 +14,9 @@ interface ThemeContextAPI {
 
 const ThemeContext = createContext<ThemeContextAPI | null>(null);
 
-const ThemeProvider: React.FC = ({ children }) => {
+const ThemeProvider: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
   const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(themes.light);
 
   const toggleTheme = () => {

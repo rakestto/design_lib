@@ -7,7 +7,9 @@ interface ThemeContextAPI {
     currentTheme: DefaultTheme;
 }
 declare const ThemeContext: React.Context<ThemeContextAPI | null>;
-declare const ThemeProvider: React.FC;
+declare const ThemeProvider: React.FC<{
+    children?: React.ReactNode;
+}>;
 
 declare const GlobalStyle: styled_components.GlobalStyleComponent<{}, styled_components.DefaultTheme>;
 

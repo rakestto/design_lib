@@ -6,6 +6,8 @@ interface ThemeContextAPI {
     currentTheme: DefaultTheme;
 }
 declare const ThemeContext: React.Context<ThemeContextAPI | null>;
-declare const ThemeProvider: React.FC;
+declare const ThemeProvider: React.FC<{
+    children?: React.ReactNode;
+}>;
 export default ThemeProvider;
 export { ThemeContext };
