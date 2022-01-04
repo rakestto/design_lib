@@ -71,7 +71,3 @@ export interface Themes {
     dark: Theme;
     light: Theme;
 }
-declare module "styled-components" {
-    interface DefaultTheme extends Theme {
-    }
-}

@@ -13,6 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     body{
         padding: 0px;
         margin: 0px;
-        background-color: whitesmoke ;
+        background-color: ${({ theme }) => theme.colorPalette.neutrals[90]}
     }
 `;

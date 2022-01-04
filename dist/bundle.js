@@ -195,7 +195,10 @@ function __makeTemplateObject(cooked, raw) {
   return cooked;
 }
 
-var GlobalStyle = styledComponents.createGlobalStyle(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    *{\n        box-sizing: border-box;\n    }\n\n    html{\n        padding: 0px;\n        margin: 0px;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: whitesmoke ;\n    }\n"], ["\n    *{\n        box-sizing: border-box;\n    }\n\n    html{\n        padding: 0px;\n        margin: 0px;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: whitesmoke ;\n    }\n"])));
+var GlobalStyle = styledComponents.createGlobalStyle(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    *{\n        box-sizing: border-box;\n    }\n\n    html{\n        padding: 0px;\n        margin: 0px;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"], ["\n    *{\n        box-sizing: border-box;\n    }\n\n    html{\n        padding: 0px;\n        margin: 0px;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colorPalette.neutrals[90];
+});
 var templateObject_1;
 
 exports.GlobalStyle = GlobalStyle;

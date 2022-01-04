@@ -5,7 +5,12 @@ import {
   ThemeProvider as SCThemeProvider,
 } from "styled-components";
 import { themes } from "./design-system/colorTheme";
+import { Theme } from "./design-system/colorThemeTypes";
 import React from "react";
+
+declare module "styled-components" {
+  export interface DefaultTheme extends Theme {}
+}
 
 interface ThemeContextAPI {
   toggleTheme: () => void;
