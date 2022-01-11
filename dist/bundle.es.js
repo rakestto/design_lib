@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { ThemeProvider as ThemeProvider$1, createGlobalStyle } from 'styled-components';
+import { css, ThemeProvider as ThemeProvider$1, createGlobalStyle } from 'styled-components';
 import '@babel/runtime/helpers/typeof';
 
 var colorPalette = {
@@ -200,6 +200,18 @@ var Spacing = {
     768: "768px",
 };
 
+function __makeTemplateObject(cooked, raw) {
+  if (Object.defineProperty) {
+    Object.defineProperty(cooked, "raw", {
+      value: raw
+    });
+  } else {
+    cooked.raw = raw;
+  }
+
+  return cooked;
+}
+
 var TypographyWeights = {
     light: 300,
     regular: 400,
@@ -209,118 +221,43 @@ var TypographyWeights = {
     extraBold: 800,
     black: 900,
 };
-var TypoSizes = {
-    8: 8,
-    12: 12,
-    16: 16,
-    18: 18,
-    20: 20,
-    24: 24,
-    30: 30,
-    36: 36,
-    48: 48,
-    60: 60,
-    72: 72,
+var TypoSize = {
+    8: "8px",
+    12: "12px",
+    16: "16px",
+    18: "18px",
+    20: "20px",
+    24: "24px",
+    30: "30px",
+    36: "36px",
+    48: "48px",
+    60: "60px",
+    72: "72px",
 };
 var display = {
-    large: {
-        lineHeight: 64,
-        size: 57,
-        tracking: 0,
-        weight: TypographyWeights.regular,
-    },
-    medium: {
-        lineHeight: 52,
-        size: 45,
-        tracking: 0,
-        weight: TypographyWeights.regular,
-    },
-    small: {
-        lineHeight: 44,
-        size: 36,
-        tracking: 0,
-        weight: TypographyWeights.regular,
-    },
+    large: css(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n    line-height: 64px;\n    font-size: 57px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "], ["\n    line-height: 64px;\n    font-size: 57px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
+    medium: css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    line-height: 52px;\n    font-size: 45px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "], ["\n    line-height: 52px;\n    font-size: 45px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
+    small: css(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    line-height: 44px;\n    font-size: 36px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "], ["\n    line-height: 44px;\n    font-size: 36px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
 };
 var heading = {
-    large: {
-        lineHeight: 40,
-        size: 32,
-        tracking: 0,
-        weight: TypographyWeights.regular,
-    },
-    medium: {
-        lineHeight: 36,
-        size: 28,
-        tracking: 0,
-        weight: TypographyWeights.regular,
-    },
-    small: {
-        lineHeight: 32,
-        size: 24,
-        tracking: 0,
-        weight: TypographyWeights.regular,
-    },
+    large: css(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n    line-height: 40px;\n    font-size: 32px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "], ["\n    line-height: 40px;\n    font-size: 32px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
+    medium: css(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n    line-height: 36px;\n    font-size: 28px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "], ["\n    line-height: 36px;\n    font-size: 28px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
+    small: css(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    line-height: 32px;\n    font-size: 24px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "], ["\n    line-height: 32px;\n    font-size: 24px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
 };
 var title = {
-    large: {
-        lineHeight: 28,
-        size: 22,
-        tracking: 0,
-        weight: TypographyWeights.regular,
-    },
-    medium: {
-        lineHeight: 24,
-        size: 16,
-        tracking: 0.15,
-        weight: TypographyWeights.regular,
-    },
-    small: {
-        lineHeight: 32,
-        size: 24,
-        tracking: 0,
-        weight: TypographyWeights.regular,
-    },
+    large: css(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n    line-height: 28px;\n    font-size: 22px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "], ["\n    line-height: 28px;\n    font-size: 22px;\n    letter-spacing: 0px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
+    medium: css(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n    line-height: 24px;\n    font-size: 26px;\n    letter-spacing: 0.15px;\n    font-weight: ", "; //500\n  "], ["\n    line-height: 24px;\n    font-size: 26px;\n    letter-spacing: 0.15px;\n    font-weight: ", "; //500\n  "])), TypographyWeights.medium),
+    small: css(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n    line-height: 20px;\n    font-size: 14px;\n    letter-spacing: 0.1px;\n    font-weight: ", ";\n  "], ["\n    line-height: 20px;\n    font-size: 14px;\n    letter-spacing: 0.1px;\n    font-weight: ", ";\n  "])), TypographyWeights.medium),
 };
 var label = {
-    large: {
-        lineHeight: 20,
-        size: 14,
-        tracking: 0.1,
-        weight: TypographyWeights.regular,
-    },
-    medium: {
-        lineHeight: 16,
-        size: 12,
-        tracking: 0.5,
-        weight: TypographyWeights.regular,
-    },
-    small: {
-        lineHeight: 6,
-        size: 11,
-        tracking: 0.5,
-        weight: TypographyWeights.regular,
-    },
+    large: css(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n    line-height: 20px;\n    font-size: 14px;\n    letter-spacing: 0.1px;\n    font-weight: ", ";\n  "], ["\n    line-height: 20px;\n    font-size: 14px;\n    letter-spacing: 0.1px;\n    font-weight: ", ";\n  "])), TypographyWeights.medium),
+    medium: css(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n    line-height: 16px;\n    font-size: 12px;\n    letter-spacing: 0.5px;\n    font-weight: ", ";\n  "], ["\n    line-height: 16px;\n    font-size: 12px;\n    letter-spacing: 0.5px;\n    font-weight: ", ";\n  "])), TypographyWeights.medium),
+    small: css(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n    line-height: 6px;\n    font-size: 11px;\n    letter-spacing: 0.5px;\n    font-weight: ", ";\n  "], ["\n    line-height: 6px;\n    font-size: 11px;\n    letter-spacing: 0.5px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
 };
 var body = {
-    large: {
-        lineHeight: 24,
-        size: 16,
-        tracking: 0.15,
-        weight: TypographyWeights.regular,
-    },
-    medium: {
-        lineHeight: 20,
-        size: 14,
-        tracking: 0.25,
-        weight: TypographyWeights.regular,
-    },
-    small: {
-        lineHeight: 16,
-        size: 12,
-        tracking: 0.4,
-        weight: TypographyWeights.regular,
-    },
+    large: css(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n    line-height: 24px;\n    font-size: 16px;\n    letter-spacing: 0.15px;\n    font-weight: ", ";\n  "], ["\n    line-height: 24px;\n    font-size: 16px;\n    letter-spacing: 0.15px;\n    font-weight: ", ";\n  "])), TypographyWeights.medium),
+    medium: css(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n    line-height: 20px;\n    font-size: 14px;\n    letter-spacing: 0.25px;\n    font-weight: ", ";\n  "], ["\n    line-height: 20px;\n    font-size: 14px;\n    letter-spacing: 0.25px;\n    font-weight: ", ";\n  "])), TypographyWeights.medium),
+    small: css(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n    line-height: 16px;\n    font-size: 12px;\n    letter-spacing: 0.4px;\n    font-weight: ", ";\n  "], ["\n    line-height: 16px;\n    font-size: 12px;\n    letter-spacing: 0.4px;\n    font-weight: ", ";\n  "])), TypographyWeights.regular),
 };
 var TypoSystem = {
     typographyRoles: {
@@ -330,9 +267,10 @@ var TypoSystem = {
         label: label,
         body: body,
     },
-    typographySizes: TypoSizes,
+    typographySizes: TypoSize,
     typographyWeigths: TypographyWeights,
 };
+var templateObject_1$1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15;
 
 var ThemeContext = createContext(null);
 var DesignSystemLight = {
@@ -361,19 +299,7 @@ var ThemeProvider = function (_a) {
         React.createElement(ThemeProvider$1, { theme: currentDS }, children)));
 };
 
-function __makeTemplateObject(cooked, raw) {
-  if (Object.defineProperty) {
-    Object.defineProperty(cooked, "raw", {
-      value: raw
-    });
-  } else {
-    cooked.raw = raw;
-  }
-
-  return cooked;
-}
-
-var GlobalStyle = createGlobalStyle(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    *{\n        box-sizing: border-box;\n    }\n\n    html{\n        padding: 0px;\n        margin: 0px;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"], ["\n    *{\n        box-sizing: border-box;\n    }\n\n    html{\n        padding: 0px;\n        margin: 0px;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"])), function (_a) {
+var GlobalStyle = createGlobalStyle(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    *{\n        box-sizing: border-box;\n    }\n    \n    html{\n        padding: 0px;\n        margin: 0px;\n        font-family: 'Rubik', sans-serif;\n\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"], ["\n    *{\n        box-sizing: border-box;\n    }\n    \n    html{\n        padding: 0px;\n        margin: 0px;\n        font-family: 'Rubik', sans-serif;\n\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.cuaternary;
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styled_components from 'styled-components';
-import { DefaultTheme } from 'styled-components';
+import { FlattenSimpleInterpolation, DefaultTheme } from 'styled-components';
 
 declare type Color = string;
 interface ColorSet {
@@ -77,30 +77,24 @@ interface TypoWeights {
     extraBold: number;
     black: number;
 }
+
 interface TypoSizes {
-    8: number;
-    12: number;
-    16: number;
-    18: number;
-    20: number;
-    24: number;
-    30: number;
-    36: number;
-    48: number;
-    60: number;
-    72: number;
-}
-interface TypographyProperties {
-    font?: string;
-    lineHeight: number;
-    size: number;
-    tracking: number;
-    weight: number;
+    8: string;
+    12: string;
+    16: string;
+    18: string;
+    20: string;
+    24: string;
+    30: string;
+    36: string;
+    48: string;
+    60: string;
+    72: string;
 }
 interface TypographyRole {
-    large: TypographyProperties;
-    medium: TypographyProperties;
-    small: TypographyProperties;
+    large: FlattenSimpleInterpolation;
+    medium: FlattenSimpleInterpolation;
+    small: FlattenSimpleInterpolation;
 }
 interface TypographyRoles {
     display: TypographyRole;

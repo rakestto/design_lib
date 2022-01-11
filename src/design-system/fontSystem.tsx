@@ -1,4 +1,11 @@
-import { TypeSystem, TypographyRole, TypoWeights } from "./fontTypes";
+import {
+  TypeSystem,
+  TypographyRole,
+  TypoSizes,
+  TypoWeights,
+} from "./fontTypes";
+
+import { css } from "styled-components";
 
 const TypographyWeights: TypoWeights = {
   light: 300,
@@ -10,122 +17,119 @@ const TypographyWeights: TypoWeights = {
   black: 900,
 };
 
-const TypoSizes = {
-  8: 8,
-  12: 12,
-  16: 16,
-  18: 18,
-  20: 20,
-  24: 24,
-  30: 30,
-  36: 36,
-  48: 48,
-  60: 60,
-  72: 72,
+const TypoSize: TypoSizes = {
+  8: "8px",
+  12: "12px",
+  16: "16px",
+  18: "18px",
+  20: "20px",
+  24: "24px",
+  30: "30px",
+  36: "36px",
+  48: "48px",
+  60: "60px",
+  72: "72px",
 };
 
 const display: TypographyRole = {
-  large: {
-    lineHeight: 64,
-    size: 57,
-    tracking: 0,
-    weight: TypographyWeights.regular,
-  },
-  medium: {
-    lineHeight: 52,
-    size: 45,
-    tracking: 0,
-    weight: TypographyWeights.regular,
-  },
-  small: {
-    lineHeight: 44,
-    size: 36,
-    tracking: 0,
-    weight: TypographyWeights.regular,
-  },
+  large: css`
+    line-height: 64px;
+    font-size: 57px;
+    letter-spacing: 0px;
+    font-weight: ${TypographyWeights.regular};
+  `,
+  medium: css`
+    line-height: 52px;
+    font-size: 45px;
+    letter-spacing: 0px;
+    font-weight: ${TypographyWeights.regular};
+  `,
+  small: css`
+    line-height: 44px;
+    font-size: 36px;
+    letter-spacing: 0px;
+    font-weight: ${TypographyWeights.regular};
+  `,
 };
-
 const heading: TypographyRole = {
-  large: {
-    lineHeight: 40,
-    size: 32,
-    tracking: 0,
-    weight: TypographyWeights.regular,
-  },
-  medium: {
-    lineHeight: 36,
-    size: 28,
-    tracking: 0,
-    weight: TypographyWeights.regular,
-  },
-  small: {
-    lineHeight: 32,
-    size: 24,
-    tracking: 0,
-    weight: TypographyWeights.regular,
-  },
+  large: css`
+    line-height: 40px;
+    font-size: 32px;
+    letter-spacing: 0px;
+    font-weight: ${TypographyWeights.regular};
+  `,
+  medium: css`
+    line-height: 36px;
+    font-size: 28px;
+    letter-spacing: 0px;
+    font-weight: ${TypographyWeights.regular};
+  `,
+  small: css`
+    line-height: 32px;
+    font-size: 24px;
+    letter-spacing: 0px;
+    font-weight: ${TypographyWeights.regular};
+  `,
 };
-
 const title: TypographyRole = {
-  large: {
-    lineHeight: 28,
-    size: 22,
-    tracking: 0,
-    weight: TypographyWeights.regular,
-  },
-  medium: {
-    lineHeight: 24,
-    size: 16,
-    tracking: 0.15,
-    weight: TypographyWeights.regular,
-  },
-  small: {
-    lineHeight: 32,
-    size: 24,
-    tracking: 0,
-    weight: TypographyWeights.regular,
-  },
+  large: css`
+    line-height: 28px;
+    font-size: 22px;
+    letter-spacing: 0px;
+    font-weight: ${TypographyWeights.regular};
+  `,
+  medium: css`
+    line-height: 24px;
+    font-size: 26px;
+    letter-spacing: 0.15px;
+    font-weight: ${TypographyWeights.medium}; //500
+  `,
+  small: css`
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    font-weight: ${TypographyWeights.medium};
+  `,
 };
-
 const label: TypographyRole = {
-  large: {
-    lineHeight: 20,
-    size: 14,
-    tracking: 0.1,
-    weight: TypographyWeights.regular,
-  },
-  medium: {
-    lineHeight: 16,
-    size: 12,
-    tracking: 0.5,
-    weight: TypographyWeights.regular,
-  },
-  small: {
-    lineHeight: 6,
-    size: 11,
-    tracking: 0.5,
-    weight: TypographyWeights.regular,
-  },
+  large: css`
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    font-weight: ${TypographyWeights.medium};
+  `,
+  medium: css`
+    line-height: 16px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: ${TypographyWeights.medium};
+  `,
+  small: css`
+    line-height: 6px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    font-weight: ${TypographyWeights.regular};
+  `,
 };
 const body: TypographyRole = {
-  large: {
-    lineHeight: 24,
-    size: 16,
-    tracking: 0.15,
-    weight: TypographyWeights.regular,
-  },
-  medium: {
-    lineHeight: 20,
-    size: 14,
-    tracking: 0.25,
-    weight: TypographyWeights.regular,
-  },
-  small: {
-    lineHeight: 16,
-    size: 12,
-    tracking: 0.4,
-    weight: TypographyWeights.regular,
-  },
+  large: css`
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: 0.15px;
+    font-weight: ${TypographyWeights.medium};
+  `,
+  medium: css`
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    font-weight: ${TypographyWeights.medium};
+  `,
+  small: css`
+    line-height: 16px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: ${TypographyWeights.regular};
+  `,
 };
 
 const TypoSystem: TypeSystem = {
@@ -136,7 +140,7 @@ const TypoSystem: TypeSystem = {
     label,
     body,
   },
-  typographySizes: TypoSizes,
+  typographySizes: TypoSize,
   typographyWeigths: TypographyWeights,
 };
 
