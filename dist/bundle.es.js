@@ -299,9 +299,9 @@ var ThemeProvider = function (_a) {
         React.createElement(ThemeProvider$1, { theme: currentDS }, children)));
 };
 
-var GlobalStyle = createGlobalStyle(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    *{\n        box-sizing: border-box;\n    }\n    \n    html{\n        padding: 0px;\n        margin: 0px;\n        font-family: 'Rubik', sans-serif;\n\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"], ["\n    *{\n        box-sizing: border-box;\n    }\n    \n    html{\n        padding: 0px;\n        margin: 0px;\n        font-family: 'Rubik', sans-serif;\n\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"])), function (_a) {
+var GlobalStyle = createGlobalStyle(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    *{\n        box-sizing: border-box;\n    }\n    \n    html{\n        padding: 0px;\n        margin: 0px;\n        font-family: 'Rubik', sans-serif;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"], ["\n    *{\n        box-sizing: border-box;\n    }\n    \n    html{\n        padding: 0px;\n        margin: 0px;\n        font-family: 'Rubik', sans-serif;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.colors.cuaternary;
+    return theme.colors.background;
 });
 var templateObject_1;
 
