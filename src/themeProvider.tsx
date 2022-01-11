@@ -8,7 +8,7 @@ import { themes } from "./design-system/colorTheme";
 import Spacing from "./design-system/spacing";
 import TypoSystem from "./design-system/fontSystem";
 import { DesignSystem } from "./design-system/DSTypes";
-import { CurrentTheme } from "./design-system/colorThemeTypes";
+import Shadows from "./design-system/shadows";
 
 declare module "styled-components" {
   export interface DefaultTheme extends DesignSystem {}
@@ -25,11 +25,13 @@ const DesignSystemLight: DesignSystem = {
   colors: themes.light,
   spacing: Spacing,
   typography: TypoSystem,
+  shadows: Shadows,
 };
 const DesignSystemDark: DesignSystem = {
   colors: themes.dark,
   spacing: Spacing,
   typography: TypoSystem,
+  shadows: Shadows,
 };
 
 const ThemeProvider: React.FC<{ children?: React.ReactNode }> = ({
