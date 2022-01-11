@@ -21,6 +21,7 @@ export interface ColorPalette<T> {
     tertiary: T;
     cuaternary: T;
     neutrals: T;
+    error: T;
 }
 export interface SurfaceTones {
     surfaceOne: string;
@@ -71,3 +72,4 @@ export interface Themes {
     dark: Theme;
     light: Theme;
 }
+export declare type CurrentTheme = "dark" | "light";

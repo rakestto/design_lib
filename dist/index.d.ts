@@ -1,6 +1,6 @@
+import React from 'react';
 import * as styled_components from 'styled-components';
 import { DefaultTheme } from 'styled-components';
-import React from 'react';
 
 declare type Color = string;
 interface ColorSet {
@@ -24,6 +24,7 @@ interface ColorPalette<T> {
     tertiary: T;
     cuaternary: T;
     neutrals: T;
+    error: T;
 }
 interface SurfaceTones {
     surfaceOne: string;
@@ -67,13 +68,85 @@ interface Theme {
     surfaceTones: SurfaceTones;
 }
 
+interface TypoWeights {
+    light: number;
+    regular: number;
+    medium: number;
+    semiBold: number;
+    bold: number;
+    extraBold: number;
+    black: number;
+}
+interface TypoSizes {
+    8: number;
+    12: number;
+    16: number;
+    18: number;
+    20: number;
+    24: number;
+    30: number;
+    36: number;
+    48: number;
+    60: number;
+    72: number;
+}
+interface TypographyProperties {
+    font?: string;
+    lineHeight: number;
+    size: number;
+    tracking: number;
+    weight: number;
+}
+interface TypographyRole {
+    large: TypographyProperties;
+    medium: TypographyProperties;
+    small: TypographyProperties;
+}
+interface TypographyRoles {
+    display: TypographyRole;
+    heading: TypographyRole;
+    title: TypographyRole;
+    label: TypographyRole;
+    body: TypographyRole;
+}
+interface TypeSystem {
+    typographyRoles: TypographyRoles;
+    typographySizes: TypoSizes;
+    typographyWeigths: TypoWeights;
+}
+
+interface SpacingValues {
+    4: string;
+    8: string;
+    12: string;
+    16: string;
+    24: string;
+    32: string;
+    48: string;
+    64: string;
+    96: string;
+    128: string;
+    192: string;
+    256: string;
+    384: string;
+    512: string;
+    640: string;
+    768: string;
+}
+
+interface DesignSystem {
+    colors: Theme;
+    spacing: SpacingValues;
+    typography: TypeSystem;
+}
+
 declare module "styled-components" {
-    interface DefaultTheme extends Theme {
+    interface DefaultTheme extends DesignSystem {
     }
 }
 interface ThemeContextAPI {
     toggleTheme: () => void;
-    currentTheme: DefaultTheme;
+    currentDS: DefaultTheme;
 }
 declare const ThemeContext: React.Context<ThemeContextAPI | null>;
 declare const ThemeProvider: React.FC<{

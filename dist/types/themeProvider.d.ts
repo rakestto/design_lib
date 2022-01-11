@@ -1,14 +1,14 @@
+import React from "react";
 import "styled-components";
 import { DefaultTheme } from "styled-components";
-import { Theme } from "./design-system/colorThemeTypes";
-import React from "react";
+import { DesignSystem } from "./design-system/DSTypes";
 declare module "styled-components" {
-    interface DefaultTheme extends Theme {
+    interface DefaultTheme extends DesignSystem {
     }
 }
 interface ThemeContextAPI {
     toggleTheme: () => void;
-    currentTheme: DefaultTheme;
+    currentDS: DefaultTheme;
 }
 declare const ThemeContext: React.Context<ThemeContextAPI | null>;
 declare const ThemeProvider: React.FC<{

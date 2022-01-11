@@ -23,6 +23,7 @@ export interface ColorPalette<T> {
   tertiary: T;
   cuaternary: T;
   neutrals: T;
+  error: T;
 }
 
 export interface SurfaceTones {
@@ -38,8 +39,6 @@ export interface SurfacePalette {
   darkSurfaces: SurfaceTones;
 }
 
-//Theme = colorPalette, surfacePalette, M3-Tokens
-//TODO - Add typography and spacings
 export interface Theme {
   primary?: Color;
   primaryContainer?: Color;
@@ -83,3 +82,5 @@ export interface Themes {
   dark: Theme;
   light: Theme;
 }
+
+export type CurrentTheme = "dark" | "light";

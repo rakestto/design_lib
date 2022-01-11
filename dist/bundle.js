@@ -86,6 +86,21 @@ var colorPalette = {
         99: "#F0F2F4",
         100: "#ffffff",
     },
+    error: {
+        0: "#000000",
+        10: "#410E0B",
+        20: "#601410",
+        30: "#8C1D18",
+        40: "#B3261E",
+        50: "#DC362E",
+        60: "#E46962",
+        70: "#EC928E",
+        80: "#F2B8B5",
+        90: "#F9DEDC",
+        95: "#FCEEEE",
+        99: "#FFFBF9",
+        100: "#ffffff",
+    },
 };
 var surfacePalette = {
     ligthSurfaces: {
@@ -116,6 +131,8 @@ var themes = {
         surface: colorPalette.neutrals[30],
         surfaceVariant: colorPalette.neutrals[90],
         background: colorPalette.neutrals[30],
+        error: colorPalette.error[80],
+        errorContainer: colorPalette.error[30],
         onPrimary: colorPalette.primary[20],
         onPrimaryContainer: colorPalette.primary[90],
         onSecondary: colorPalette.secondary[20],
@@ -126,6 +143,8 @@ var themes = {
         onCuaternaryContainer: colorPalette.cuaternary[30],
         onSurface: colorPalette.neutrals[99],
         onSurfaceVariant: colorPalette.neutrals[90],
+        onError: colorPalette.error[20],
+        onErrorContainer: colorPalette.error[90],
         onBackground: colorPalette.neutrals[99],
         outline: colorPalette.neutrals[70],
         inverseSurface: colorPalette.neutrals[99],
@@ -146,6 +165,8 @@ var themes = {
         surface: colorPalette.neutrals[99],
         surfaceVariant: colorPalette.neutrals[90],
         background: colorPalette.neutrals[99],
+        error: colorPalette.error[40],
+        errorContainer: colorPalette.error[90],
         onPrimary: colorPalette.primary[99],
         onPrimaryContainer: colorPalette.primary[20],
         onSecondary: colorPalette.secondary[99],
@@ -156,6 +177,8 @@ var themes = {
         onCuaternaryContainer: colorPalette.cuaternary[20],
         onSurface: colorPalette.neutrals[20],
         onSurfaceVariant: colorPalette.neutrals[30],
+        onError: colorPalette.error[100],
+        onErrorContainer: colorPalette.error[10],
         onBackground: colorPalette.neutrals[20],
         outline: colorPalette.neutrals[60],
         inverseSurface: colorPalette.neutrals[30],
@@ -166,21 +189,184 @@ var themes = {
     },
 };
 
+var Spacing = {
+    4: "4px",
+    8: "8px",
+    12: "12px",
+    16: "16px",
+    24: "24px",
+    32: "32px",
+    48: "48px",
+    64: "64px",
+    96: "96px",
+    128: "128px",
+    192: "192px",
+    256: "256px",
+    384: "384px",
+    512: "512px",
+    640: "640px",
+    768: "768px",
+};
+
+var TypographyWeights = {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+    extraBold: 800,
+    black: 900,
+};
+var TypoSizes = {
+    8: 8,
+    12: 12,
+    16: 16,
+    18: 18,
+    20: 20,
+    24: 24,
+    30: 30,
+    36: 36,
+    48: 48,
+    60: 60,
+    72: 72,
+};
+var display = {
+    large: {
+        lineHeight: 64,
+        size: 57,
+        tracking: 0,
+        weight: TypographyWeights.regular,
+    },
+    medium: {
+        lineHeight: 52,
+        size: 45,
+        tracking: 0,
+        weight: TypographyWeights.regular,
+    },
+    small: {
+        lineHeight: 44,
+        size: 36,
+        tracking: 0,
+        weight: TypographyWeights.regular,
+    },
+};
+var heading = {
+    large: {
+        lineHeight: 40,
+        size: 32,
+        tracking: 0,
+        weight: TypographyWeights.regular,
+    },
+    medium: {
+        lineHeight: 36,
+        size: 28,
+        tracking: 0,
+        weight: TypographyWeights.regular,
+    },
+    small: {
+        lineHeight: 32,
+        size: 24,
+        tracking: 0,
+        weight: TypographyWeights.regular,
+    },
+};
+var title = {
+    large: {
+        lineHeight: 28,
+        size: 22,
+        tracking: 0,
+        weight: TypographyWeights.regular,
+    },
+    medium: {
+        lineHeight: 24,
+        size: 16,
+        tracking: 0.15,
+        weight: TypographyWeights.regular,
+    },
+    small: {
+        lineHeight: 32,
+        size: 24,
+        tracking: 0,
+        weight: TypographyWeights.regular,
+    },
+};
+var label = {
+    large: {
+        lineHeight: 20,
+        size: 14,
+        tracking: 0.1,
+        weight: TypographyWeights.regular,
+    },
+    medium: {
+        lineHeight: 16,
+        size: 12,
+        tracking: 0.5,
+        weight: TypographyWeights.regular,
+    },
+    small: {
+        lineHeight: 6,
+        size: 11,
+        tracking: 0.5,
+        weight: TypographyWeights.regular,
+    },
+};
+var body = {
+    large: {
+        lineHeight: 24,
+        size: 16,
+        tracking: 0.15,
+        weight: TypographyWeights.regular,
+    },
+    medium: {
+        lineHeight: 20,
+        size: 14,
+        tracking: 0.25,
+        weight: TypographyWeights.regular,
+    },
+    small: {
+        lineHeight: 16,
+        size: 12,
+        tracking: 0.4,
+        weight: TypographyWeights.regular,
+    },
+};
+var TypoSystem = {
+    typographyRoles: {
+        display: display,
+        heading: heading,
+        title: title,
+        label: label,
+        body: body,
+    },
+    typographySizes: TypoSizes,
+    typographyWeigths: TypographyWeights,
+};
+
 var ThemeContext = React.createContext(null);
+var DesignSystemLight = {
+    colors: themes.light,
+    spacing: Spacing,
+    typography: TypoSystem,
+};
+var DesignSystemDark = {
+    colors: themes.dark,
+    spacing: Spacing,
+    typography: TypoSystem,
+};
 var ThemeProvider = function (_a) {
     var children = _a.children;
-    var _b = React.useState(themes.light), currentTheme = _b[0], setCurrentTheme = _b[1];
+    var _b = React.useState(DesignSystemLight), currentDS = _b[0], setCurrentDS = _b[1];
     var toggleTheme = function () {
-        setCurrentTheme(function (prev) {
-            return prev === themes.light ? themes.dark : themes.light;
+        setCurrentDS(function (prev) {
+            return prev === DesignSystemLight ? DesignSystemDark : DesignSystemLight;
         });
     };
     var values = {
         toggleTheme: toggleTheme,
-        currentTheme: currentTheme,
+        currentDS: currentDS,
     };
     return (React__default["default"].createElement(ThemeContext.Provider, { value: values },
-        React__default["default"].createElement(styledComponents.ThemeProvider, { theme: currentTheme }, children)));
+        React__default["default"].createElement(styledComponents.ThemeProvider, { theme: currentDS }, children)));
 };
 
 function __makeTemplateObject(cooked, raw) {
@@ -197,7 +383,7 @@ function __makeTemplateObject(cooked, raw) {
 
 var GlobalStyle = styledComponents.createGlobalStyle(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    *{\n        box-sizing: border-box;\n    }\n\n    html{\n        padding: 0px;\n        margin: 0px;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"], ["\n    *{\n        box-sizing: border-box;\n    }\n\n    html{\n        padding: 0px;\n        margin: 0px;\n    }\n\n    body{\n        padding: 0px;\n        margin: 0px;\n        background-color: ", "\n    }\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.colorPalette.neutrals[90];
+    return theme.colors.cuaternary;
 });
 var templateObject_1;
 

@@ -1,43 +1,56 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import "styled-components";
 import {
   DefaultTheme,
   ThemeProvider as SCThemeProvider,
 } from "styled-components";
 import { themes } from "./design-system/colorTheme";
-import { Theme } from "./design-system/colorThemeTypes";
-import React from "react";
+import Spacing from "./design-system/spacing";
+import TypoSystem from "./design-system/fontSystem";
+import { DesignSystem } from "./design-system/DSTypes";
+import { CurrentTheme } from "./design-system/colorThemeTypes";
 
 declare module "styled-components" {
-  export interface DefaultTheme extends Theme {}
+  export interface DefaultTheme extends DesignSystem {}
 }
 
 interface ThemeContextAPI {
   toggleTheme: () => void;
-  currentTheme: DefaultTheme;
+  currentDS: DefaultTheme;
 }
 
 const ThemeContext = createContext<ThemeContextAPI | null>(null);
 
+const DesignSystemLight: DesignSystem = {
+  colors: themes.light,
+  spacing: Spacing,
+  typography: TypoSystem,
+};
+const DesignSystemDark: DesignSystem = {
+  colors: themes.dark,
+  spacing: Spacing,
+  typography: TypoSystem,
+};
+
 const ThemeProvider: React.FC<{ children?: React.ReactNode }> = ({
   children,
 }) => {
-  const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(themes.light);
+  const [currentDS, setCurrentDS] = useState<DefaultTheme>(DesignSystemLight);
 
   const toggleTheme = () => {
-    setCurrentTheme((prev) =>
-      prev === themes.light ? themes.dark : themes.light
+    setCurrentDS((prev) =>
+      prev === DesignSystemLight ? DesignSystemDark : DesignSystemLight
     );
   };
 
   const values: ThemeContextAPI = {
     toggleTheme,
-    currentTheme,
+    currentDS,
   };
 
   return (
     <ThemeContext.Provider value={values}>
-      <SCThemeProvider theme={currentTheme}>{children}</SCThemeProvider>
+      <SCThemeProvider theme={currentDS}>{children}</SCThemeProvider>
     </ThemeContext.Provider>
   );
 };

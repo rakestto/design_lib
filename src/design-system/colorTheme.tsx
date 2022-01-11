@@ -81,6 +81,21 @@ const colorPalette: ColorPalette<ColorSet> = {
     99: "#F0F2F4",
     100: "#ffffff",
   },
+  error: {
+    0: "#000000",
+    10: "#410E0B",
+    20: "#601410",
+    30: "#8C1D18",
+    40: "#B3261E",
+    50: "#DC362E",
+    60: "#E46962",
+    70: "#EC928E",
+    80: "#F2B8B5",
+    90: "#F9DEDC",
+    95: "#FCEEEE",
+    99: "#FFFBF9",
+    100: "#ffffff",
+  },
 };
 
 const surfacePalette: SurfacePalette = {
@@ -114,6 +129,8 @@ const themes: Themes = {
     surface: colorPalette.neutrals[30],
     surfaceVariant: colorPalette.neutrals[90],
     background: colorPalette.neutrals[30],
+    error: colorPalette.error[80],
+    errorContainer: colorPalette.error[30],
 
     onPrimary: colorPalette.primary[20],
     onPrimaryContainer: colorPalette.primary[90],
@@ -126,6 +143,8 @@ const themes: Themes = {
 
     onSurface: colorPalette.neutrals[99],
     onSurfaceVariant: colorPalette.neutrals[90],
+    onError: colorPalette.error[20],
+    onErrorContainer: colorPalette.error[90],
     onBackground: colorPalette.neutrals[99],
     outline: colorPalette.neutrals[70],
 
@@ -149,6 +168,8 @@ const themes: Themes = {
     surface: colorPalette.neutrals[99],
     surfaceVariant: colorPalette.neutrals[90],
     background: colorPalette.neutrals[99],
+    error: colorPalette.error[40],
+    errorContainer: colorPalette.error[90],
 
     onPrimary: colorPalette.primary[99],
     onPrimaryContainer: colorPalette.primary[20],
@@ -161,6 +182,8 @@ const themes: Themes = {
 
     onSurface: colorPalette.neutrals[20],
     onSurfaceVariant: colorPalette.neutrals[30],
+    onError: colorPalette.error[100],
+    onErrorContainer: colorPalette.error[10],
     onBackground: colorPalette.neutrals[20],
     outline: colorPalette.neutrals[60],
 
